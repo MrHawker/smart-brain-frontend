@@ -57,7 +57,7 @@ class App extends React.Component {
     }
     OnEnter = () => {
     this.setState({imageURL:this.state.input});
-    fetch('http://localhost:3000/imageurl',{
+    fetch('https://sleepy-everglades-04413.herokuapp.com/imageurl',{
         method:'post',
         headers:{'Content-type':'application/json'},
         body: JSON.stringify({
@@ -67,7 +67,7 @@ class App extends React.Component {
         .then(response => response.json())
         .then(result => {
             if(result){
-                fetch('http://localhost:3000/image',{
+                fetch('https://sleepy-everglades-04413.herokuapp.com/image',{
                 method:'put',
                 headers:{'Content-type':'application/json'},
                 body: JSON.stringify({

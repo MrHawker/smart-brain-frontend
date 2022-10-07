@@ -18,7 +18,7 @@ class Register extends Component{
         this.setState({RegisterPassword:event.target.value})
     }
     onSubmitRegister =() =>{
-        fetch('http://localhost:3000/register',{
+        fetch('https://sleepy-everglades-04413.herokuapp.com/register',{
             method:'post',
             headers:{'Content-type':'application/json'},
             body: JSON.stringify({
